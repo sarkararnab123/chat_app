@@ -8,12 +8,21 @@ const uploadOnCloudinary= async(filepath)=>{
         api_secret:process.env.API_SECRET
     })
     try {
+        if (!filepath || !fs.existsSync(filepath)) {
+            throw new Error(`file not found for cloudinary upload: ${filepath}`);
+        }
+
         const uploadResult = await cloudinary.uploader.upload(filepath)
-        fs.unlinkSync(filepath)
+        if (fs.existsSync(filepath)) {
+            fs.unlinkSync(filepath)
+        }
         return uploadResult.secure_url
     } catch (error) {
-        fs.unlinkSync(filepath)
-        console.log(error)
+        if (filepath && fs.existsSync(filepath)) {
+            fs.unlinkSync(filepath)
+        }
+        console.log("cloudinary upload error:", error.message)
+        throw error
     }
 
 }
