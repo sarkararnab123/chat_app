@@ -20,14 +20,16 @@ app.use(cors({
 app.use(express.json());
 app.use(cookieParser());
 
-connectDb();
-
-
 app.use("/api/auth",authRouter)
 app.use("/api/user",userRouter)
 app.use("/api/message",messageRouter)
 
-server.listen(port,()=>{
-    console.log("server started")
-})
+const startServer = async () => {
+    await connectDb();
+    server.listen(port,()=>{
+        console.log("server started")
+    })
+}
+
+startServer();
 
