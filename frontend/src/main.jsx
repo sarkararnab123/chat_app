@@ -6,7 +6,7 @@ import { BrowserRouter } from 'react-router-dom'
 import {Provider} from "react-redux"
 import { store } from './redux/store.js'
 
-export const serverUrl = "http://localhost:8001"
+export const serverUrl = "https://chat-app-pp8q.onrender.com"
 
 createRoot(document.getElementById('root')).render(
 <BrowserRouter>
