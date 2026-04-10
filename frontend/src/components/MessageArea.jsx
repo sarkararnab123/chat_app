@@ -10,7 +10,7 @@ import { useState } from 'react';
 import EmojiPicker from "emoji-picker-react"
 import SenderMessage from './SenderMessage';
 import ReceiverMessage from './ReceiverMessage';
-import { serverUrl } from '../main'
+import { serverUrl } from '../config'
 import { setMessages, addMessage } from '../redux/message.Slice';
 import axios from "axios";
 
