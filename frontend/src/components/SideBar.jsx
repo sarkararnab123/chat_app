@@ -4,7 +4,7 @@ import dp from "../assets/dp.webp"
 import { IoSearch } from "react-icons/io5"
 import { FiLogOut } from "react-icons/fi"
 import axios from 'axios'
-import { serverUrl } from '../main'
+import { serverUrl } from '../config'
 import { setOtherUsers, setSelectedUser, setUserData } from '../redux/userSlice'
 import { useNavigate } from 'react-router-dom'
 

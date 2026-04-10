@@ -8,7 +8,7 @@ import Home from './pages/Home'
 import Profile from './pages/Profile'
 import getOtherUsers from './customhooks/getOtherUser'
 import {io} from "socket.io-client"
-import { serverUrl } from './main'
+import { serverUrl } from './config'
 import { setonlineUsers, setSocket } from './redux/userSlice'
 
 

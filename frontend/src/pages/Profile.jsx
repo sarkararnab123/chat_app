@@ -4,7 +4,7 @@ import { IoCameraOutline } from "react-icons/io5";
 import { IoArrowBack } from "react-icons/io5";
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
-import { serverUrl } from '../main';
+import { serverUrl } from '../config';
 import { setUserData } from '../redux/userSlice';
 import axios from "axios";
 
